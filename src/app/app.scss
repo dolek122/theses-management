@@ -1,0 +1,180 @@
+.sidenav-container {
+	height: 100vh;
+	background-color: var(--bg-secondary);
+}
+
+.sidenav {
+	width: 280px;
+	background: var(--bg-primary);
+	box-shadow: none;
+	border-right: 1px solid var(--border-color);
+}
+
+.sidenav-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 24px;
+	margin-bottom: 12px;
+	color: var(--primary-700);
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+
+	mat-icon {
+		font-size: 32px;
+		width: 32px;
+		height: 32px;
+		color: var(--primary-500);
+	}
+}
+
+.nav-list {
+	padding: 0 12px;
+}
+
+.nav-section {
+	padding: 16px 12px 8px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--text-disabled);
+	letter-spacing: 1px;
+}
+
+.nav-list a[mat-list-item] {
+	margin: 4px 0;
+	border-radius: var(--radius-md);
+	transition: all 0.2s ease;
+	height: 44px;
+	color: var(--text-secondary);
+
+	&:hover {
+		background-color: var(--bg-secondary);
+		color: var(--text-primary);
+        transform: translateX(4px);
+	}
+
+	&.active {
+		background-color: var(--primary-50);
+		color: var(--primary-700);
+		font-weight: 600;
+
+		mat-icon {
+			color: var(--primary-600);
+		}
+	}
+
+	mat-icon {
+		margin-right: 12px;
+		color: var(--grey-500);
+        transition: color 0.2s;
+	}
+}
+
+.sidenav-footer {
+	padding: 24px;
+	border-top: 1px solid var(--border-color);
+	margin-top: auto;
+    background: var(--bg-secondary);
+}
+
+.logout-button {
+	width: 100%;
+	justify-content: flex-start;
+	color: var(--status-error) !important;
+    font-weight: 600;
+    
+	mat-icon {
+		margin-right: 8px;
+        color: var(--status-error);
+	}
+    
+    &:hover {
+        background-color: #ffebee !important; /* Red 50 */
+    }
+}
+
+.toolbar {
+	box-shadow: none !important;
+    border-bottom: 1px solid var(--border-color);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+    background: var(--bg-primary) !important; /* White toolbar */
+    color: var(--text-primary) !important;
+    height: 64px;
+    padding: 0 24px;
+}
+
+.menu-button {
+	margin-right: 12px;
+    color: var(--text-secondary);
+}
+
+.toolbar-title {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 18px;
+	font-weight: 600;
+    color: var(--primary-900);
+
+	mat-icon {
+		font-size: 24px;
+		width: 24px;
+		height: 24px;
+        color: var(--primary-500);
+	}
+}
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 6px 16px;
+	background: var(--bg-secondary);
+	border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text-secondary);
+
+	mat-icon {
+		font-size: 20px;
+		width: 20px;
+		height: 20px;
+        color: var(--text-disabled);
+	}
+}
+
+.content-wrapper {
+	min-height: calc(100vh - 64px);
+	background-color: var(--bg-secondary); /* Ensure background color matches body */
+    padding: 24px; /* Add padding around router-outlet */
+}
+
+/* Notification Badge override */
+.mat-badge-content {
+    background-color: var(--status-error) !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.toolbar-title span {
+		display: none;
+	}
+
+	.sidenav {
+		width: 260px;
+	}
+    
+    .content-wrapper {
+        padding: 16px;
+    }
+}

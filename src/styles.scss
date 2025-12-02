@@ -1,1 +1,347 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================
+   SPÓJNA PALETA KOLORÓW MATERIAL DESIGN
+   ============================================ */
+
+:root {
+	/* Primary Colors - Material Indigo (more professional/academic) */
+	--primary-50: #e8eaf6;
+	--primary-100: #c5cae9;
+	--primary-200: #9fa8da;
+	--primary-300: #7986cb;
+	--primary-400: #5c6bc0;
+	--primary-500: #3f51b5; /* Main */
+	--primary-600: #3949ab;
+	--primary-700: #303f9f;
+	--primary-800: #283593;
+	--primary-900: #1a237e;
+
+	/* Accent Colors - Teal (good contrast with indigo) */
+	--accent-50: #e0f2f1;
+	--accent-100: #b2dfdb;
+	--accent-200: #80cbc4;
+	--accent-400: #26a69a;
+	--accent-700: #00796b;
+
+	/* Status Colors - refined for accessibility and modern look */
+	--status-pending: #fb8c00;      /* Orange 700 */
+	--status-in-progress: #1976d2;  /* Blue 700 */
+	--status-completed: #2e7d32;    /* Green 800 */
+	--status-draft: #757575;        /* Grey 600 */
+	--status-submitted: #fbc02d;    /* Yellow 700 */
+	--status-reviewed: #388e3c;     /* Green 700 */
+	--status-error: #d32f2f;        /* Red 700 */
+	--status-warning: #f57c00;      /* Orange 700 */
+	--status-success: #388e3c;      /* Green 700 */
+	--status-info: #0288d1;         /* Light Blue 700 */
+
+	/* Neutral Colors */
+	--grey-50: #fafafa;
+	--grey-100: #f5f5f5;
+	--grey-200: #eeeeee;
+	--grey-300: #e0e0e0;
+	--grey-400: #bdbdbd;
+	--grey-500: #9e9e9e;
+	--grey-600: #757575;
+	--grey-700: #616161;
+	--grey-800: #424242;
+	--grey-900: #212121;
+
+	/* Text Colors */
+	--text-primary: #212121;
+	--text-secondary: #546e7a; /* Blue Grey 600 - softer than pure grey */
+	--text-disabled: #b0bec5;
+	--text-hint: #90a4ae;
+
+	/* Background Colors */
+	--bg-primary: #ffffff;
+	--bg-secondary: #f4f7fa; /* Slightly blueish grey for background */
+	--bg-tertiary: #e8eaf6; /* Very light indigo */
+
+	/* Border & Shadow */
+	--border-color: #cfd8dc; /* Blue Grey 100 */
+	--shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+	--shadow-md: 0 4px 6px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
+	--shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.04);
+
+	/* Spacing - increased for more breathing room */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxl: 48px;
+
+	/* Border Radius - softer corners */
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 16px;
+	--radius-xl: 24px;
+}
+
+/* ============================================
+   GLOBALNE STYLE
+   ============================================ */
+
+html, body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+
+body { 
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+	line-height: 1.6;
+	font-size: 15px; /* Increased base font size */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* ============================================
+   MATERIAL DESIGN COMPONENTS OVERRIDES
+   ============================================ */
+
+/* Cards */
+mat-card {
+	border-radius: var(--radius-lg) !important;
+	box-shadow: var(--shadow-sm) !important;
+	background-color: var(--bg-primary) !important;
+	margin-bottom: var(--spacing-lg) !important; /* More spacing between cards */
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+mat-card:hover {
+	box-shadow: var(--shadow-md) !important;
+	transform: translateY(-2px);
+	transition: all 0.3s ease-out;
+    border-color: var(--primary-200);
+}
+
+mat-card-header {
+    padding: var(--spacing-lg) var(--spacing-lg) 0 !important;
+}
+
+mat-card-content {
+    padding: var(--spacing-lg) !important;
+}
+
+/* Buttons */
+mat-button, button[mat-button], button[mat-raised-button], button[mat-icon-button] {
+	border-radius: var(--radius-md) !important;
+	text-transform: none !important; /* Remove uppercase for friendlier look */
+	font-weight: 600 !important;
+	font-size: 14px !important;
+    letter-spacing: 0.2px !important;
+}
+
+button[mat-raised-button] {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+button[mat-raised-button]:not([disabled]):hover {
+    box-shadow: var(--shadow-md) !important;
+}
+
+button[mat-raised-button][color="primary"] {
+	background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%) !important;
+	color: white !important;
+}
+
+button[mat-raised-button][color="accent"] {
+	background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-700) 100%) !important;
+	color: white !important;
+}
+
+button[mat-raised-button][color="warn"] {
+	background-color: var(--status-error) !important;
+	color: white !important;
+}
+
+/* Form Fields */
+mat-form-field {
+	width: 100%;
+}
+
+mat-form-field .mat-mdc-text-field-wrapper {
+	background-color: var(--bg-primary) !important;
+    border-radius: var(--radius-md) !important;
+}
+
+/* Tables */
+table[mat-table] {
+	background-color: var(--bg-primary);
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+    box-shadow: none !important; /* Remove shadow inside card */
+    border: 1px solid var(--bg-secondary);
+}
+
+th[mat-header-cell] {
+	background-color: var(--bg-secondary);
+	font-weight: 600;
+	color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+td[mat-cell], th[mat-header-cell] {
+	padding: var(--spacing-md) var(--spacing-lg) !important;
+	border-bottom: 1px solid var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+tr[mat-row]:hover td {
+    background-color: var(--bg-secondary);
+}
+
+/* Chips - Status Colors */
+mat-chip {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+.status-chip {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+mat-chip.status-pending, .status-pending {
+	background-color: #fff3e0 !important; /* Light Orange */
+	color: var(--status-pending) !important;
+    border: 1px solid var(--status-pending);
+}
+
+mat-chip.status-in_review, .status-in_review {
+	background-color: #e3f2fd !important; /* Light Blue */
+	color: var(--status-in-progress) !important;
+    border: 1px solid var(--status-in-progress);
+}
+
+mat-chip.status-completed, .status-completed {
+	background-color: #e8f5e9 !important; /* Light Green */
+	color: var(--status-completed) !important;
+    border: 1px solid var(--status-completed);
+}
+
+mat-chip.status-draft, .status-draft {
+	background-color: #f5f5f5 !important;
+	color: var(--status-draft) !important;
+    border: 1px solid var(--status-draft);
+}
+
+mat-chip.status-submitted, .status-submitted {
+	background-color: #fffde7 !important;
+	color: var(--status-submitted) !important;
+    border: 1px solid var(--status-submitted);
+}
+
+mat-chip.status-reviewed, .status-reviewed {
+	background-color: #f1f8e9 !important;
+	color: var(--status-reviewed) !important;
+    border: 1px solid var(--status-reviewed);
+}
+
+/* Progress Bars */
+mat-progress-bar {
+	border-radius: var(--radius-sm) !important;
+    height: 6px !important;
+}
+
+mat-progress-bar .mdc-linear-progress__buffer {
+	background-color: var(--primary-100) !important;
+}
+
+mat-progress-bar .mdc-linear-progress__bar-inner {
+	background-color: var(--primary-600) !important;
+}
+
+/* Dividers */
+mat-divider {
+	border-top-color: var(--border-color) !important;
+    margin: var(--spacing-md) 0;
+}
+
+/* Icons */
+mat-icon {
+	color: var(--text-secondary);
+    vertical-align: middle;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	color: var(--primary-900);
+	font-weight: 700;
+	margin: 0 0 var(--spacing-lg) 0;
+    line-height: 1.2;
+}
+
+h1 { font-size: 36px; letter-spacing: -0.5px; }
+h2 { font-size: 30px; letter-spacing: -0.5px; }
+h3 { font-size: 24px; color: var(--text-primary); }
+h4 { font-size: 20px; color: var(--text-primary); }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--grey-300);
+	border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--grey-400);
+}
+
+/* Loading & Empty States */
+.loading, .empty-state {
+	text-align: center;
+	padding: var(--spacing-xxl);
+	color: var(--text-secondary);
+	font-size: 15px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border-color);
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+/* Common container for pages */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* Input Styles refinement */
+input, select, textarea {
+    font-family: inherit;
+}
