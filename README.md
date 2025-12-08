@@ -1,59 +1,31 @@
-# ThesesManagement
+# 🎓 Theses Management System - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+Nowoczesny i przejrzysty interfejs użytkownika do zarządzania procesem dyplomowania. Zbudowany w oparciu o najnowszy **Angular 19** i **Material Design**.
 
-## Development server
+## 🎨 Co tu znajdziesz?
+*   **Panel Studenta**: Harmonogram, przesyłanie rozdziałów, czat z promotorem.
+*   **Panel Promotora**: Zarządzanie pracami, ocena postępów, organizacja konsultacji.
+*   **Panel Administratora**: Zarządzanie użytkownikami.
+*   **Real-time Chat**: Komunikacja na żywo dzięki WebSocket.
+*   **Eksport Danych**: Generowanie raportów PDF i kalendarzy ICS.
 
-To start a local development server, run:
+## 🛠️ Tech Stack
+*   **Angular 19** – Najnowszy standard frameworka.
+*   **Angular Material** – Spójny i estetyczny UI.
+*   **RxJS** – Reaktywne zarządzanie danymi.
+*   **StompJS** – Obsługa WebSocketów.
 
-```bash
-ng serve
-```
+## 🚀 Jak uruchomić?
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1.  **Instalacja**:
+    ```bash
+    npm install
+    ```
+2.  **Start**:
+    ```bash
+    npm start
+    ```
+3.  **Otwórz**: Aplikacja dostępna pod `http://localhost:4200`.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+*Clean code, clean design, successful graduation.*
