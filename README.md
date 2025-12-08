@@ -26,3 +26,5 @@ Nowoczesny i przejrzysty interfejs użytkownika do zarządzania procesem dyplomo
     npm start
     ```
 3.  **Otwórz**: Aplikacja dostępna pod `http://localhost:4200`.
+
+👉  **Backend**: https://github.com/dolek122/System-For-Theses-Management
